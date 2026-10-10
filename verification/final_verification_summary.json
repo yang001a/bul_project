@@ -1,0 +1,44 @@
+{
+  "benchmark_experiment_rerun": false,
+  "cli": {
+    "failed": 0,
+    "passed": 5,
+    "status": "PASS"
+  },
+  "dependency_check": {
+    "message": "No broken requirements found.",
+    "status": "PASS"
+  },
+  "demo_end_to_end": {
+    "maximum_absolute_error": 0.0,
+    "non_numeric_fields": 224,
+    "numeric_fields": 274,
+    "snapshot_sha256": "1e9be334e7626a2c6949abe5c4509bc45f8e65171e6f619329082d2a7e8fd997",
+    "status": "PASS",
+    "tolerance": 1e-12
+  },
+  "hash_check": {
+    "failed": 0,
+    "passed": 38,
+    "status": "PASS"
+  },
+  "imports": {
+    "failed": 0,
+    "passed": 59,
+    "status": "PASS"
+  },
+  "interface_check": {
+    "failed": 0,
+    "passed": 262,
+    "status": "PASS"
+  },
+  "pytest": {
+    "failed": 0,
+    "passed": 318,
+    "skipped": 13,
+    "status": "PASS",
+    "warnings": 22
+  },
+  "scientific_equivalence": "PASS",
+  "status": "PASS"
+}

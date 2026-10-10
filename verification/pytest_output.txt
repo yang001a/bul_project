@@ -1,0 +1,45 @@
+........................................................................ [ 21%]
+........................................................................ [ 43%]
+................ssssss.................................................. [ 65%]
+.....................................sss...s.....................s...... [ 87%]
+ss.........................................                              [100%]
+============================== warnings summary ===============================
+tests/test_external_validation_runner.py::test_three_condition_runner_resumes_and_is_idempotent
+  C:\Users\y\AppData\Roaming\Python\Python313\site-packages\pm4py\utils.py:1027: UserWarning: Install the optional requirement `r4pm` to import/export files faster. `rustxes` remains supported as a fallback.
+    warnings.warn(
+
+tests/test_process_model_evaluator.py::test_alignment_variant_is_explicit_and_recorded
+tests/test_process_model_evaluator.py::test_alignment_variant_is_explicit_and_recorded
+tests/test_process_model_evaluator.py::test_alignment_variant_is_explicit_and_recorded
+tests/test_process_model_evaluator.py::test_alignment_variant_is_explicit_and_recorded
+tests/test_process_model_evaluator.py::test_alignment_variant_is_explicit_and_recorded
+tests/test_process_model_evaluator.py::test_alignment_variant_is_explicit_and_recorded
+tests/test_process_model_evaluator.py::test_alignment_variant_is_explicit_and_recorded
+  D:\APP\Anaconda\Lib\site-packages\numpy\matrixlib\defmatrix.py:70: PendingDeprecationWarning: the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.
+    return matrix(data, dtype=dtype, copy=False)
+
+tests/test_process_model_evaluator.py::test_alignment_variant_is_explicit_and_recorded
+tests/test_process_model_evaluator.py::test_alignment_variant_is_explicit_and_recorded
+  C:\Users\y\AppData\Roaming\Python\Python313\site-packages\pm4py\objects\petri_net\utils\explore_path.py:49: PendingDeprecationWarning: the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.
+    h_cvx = np.matrix(np.zeros(len(net.transitions))).transpose()
+
+tests/test_process_model_evaluator.py::test_alignment_variant_is_explicit_and_recorded
+tests/test_process_model_evaluator.py::test_alignment_variant_is_explicit_and_recorded
+tests/test_process_model_evaluator.py::test_alignment_variant_is_explicit_and_recorded
+tests/test_process_model_evaluator.py::test_alignment_variant_is_explicit_and_recorded
+tests/test_process_model_evaluator.py::test_alignment_variant_is_explicit_and_recorded
+tests/test_process_model_evaluator.py::test_alignment_variant_is_explicit_and_recorded
+tests/test_process_model_evaluator.py::test_alignment_variant_is_explicit_and_recorded
+  C:\Users\y\AppData\Roaming\Python\Python313\site-packages\pm4py\objects\petri_net\utils\align_utils.py:297: PendingDeprecationWarning: the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.
+    b_term = np.matrix([x * 1.0 for x in b_term]).transpose()
+
+tests/test_process_model_evaluator.py::test_alignment_variant_is_explicit_and_recorded
+tests/test_process_model_evaluator.py::test_alignment_variant_is_explicit_and_recorded
+tests/test_process_model_evaluator.py::test_alignment_variant_is_explicit_and_recorded
+tests/test_process_model_evaluator.py::test_alignment_variant_is_explicit_and_recorded
+tests/test_process_model_evaluator.py::test_alignment_variant_is_explicit_and_recorded
+  C:\Users\y\AppData\Roaming\Python\Python313\site-packages\pm4py\algo\conformance\alignments\petri_net\variants\state_equation_a_star.py:584: PendingDeprecationWarning: the matrix subclass is not the recommended way to represent matrices or deal with linear algebra (see https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html). Please adjust your code to use regular ndarray.
+    h_cvx = np.matrix(np.zeros(len(sync_net.transitions))).transpose()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+318 passed, 13 skipped, 22 warnings in 11.55s

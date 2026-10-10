@@ -1,0 +1,14 @@
+{
+  "artifacts_archived_outside_clean_release": true,
+  "cases": 3,
+  "dataset": "DEMO",
+  "demo_specific_min_edge_support": 1,
+  "epsilon": 8.0,
+  "events": 7,
+  "experiment_metadata_sha256": "1a44396895d230b225dd6c9f86bb1534aec57eea84f87aa47616e51f62c0d489",
+  "experiment_result_sha256": "03b60be6cba5416e7d8843f17a9be2053dd96e5553710a752045f8f94bc59135",
+  "main_experiment_parameters_unchanged": true,
+  "method": "DP-full",
+  "seed": 0,
+  "status": "PASS"
+}

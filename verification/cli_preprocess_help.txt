@@ -1,0 +1,21 @@
+﻿usage: main.py [-h] [--output-dir OUTPUT_DIR] [--report-only]
+               [--keep-extensions] [--drop-exact-duplicates]
+               {BPIC2017,BPIC2012,SEPSIS}
+
+BUL XES ingestion and canonical event-log preprocessing.
+
+positional arguments:
+  {BPIC2017,BPIC2012,SEPSIS}
+                        Configured dataset to preprocess.
+
+options:
+  -h, --help            show this help message and exit
+  --output-dir OUTPUT_DIR
+                        Output directory (default: data/processed/<dataset>).
+  --report-only         Write reports and manifest without the large
+                        events/traces artifacts.
+  --keep-extensions     Retain non-core XES columns; core modules still use
+                        only canonical fields.
+  --drop-exact-duplicates
+                        Drop exact duplicate core events. Disabled by default
+                        to avoid silent loss.

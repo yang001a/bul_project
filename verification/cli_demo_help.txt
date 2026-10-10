@@ -1,0 +1,16 @@
+﻿usage: main.py [-h] [--output-dir OUTPUT_DIR]
+               [--epsilon {0.5,1.0,2.0,4.0,8.0}]
+               [--seed {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29}]
+
+Run the bundled XES through preprocessing, behavioral statistics, case-level
+DP release, established losses, and BUL aggregation.
+
+options:
+  -h, --help            show this help message and exit
+  --output-dir OUTPUT_DIR
+                        Destination for the demo CSV and metadata JSON.
+  --epsilon {0.5,1.0,2.0,4.0,8.0}
+                        Configured privacy budget used by the one-condition
+                        demo.
+  --seed {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29}
+                        Experiment seed in the frozen 0-29 range.

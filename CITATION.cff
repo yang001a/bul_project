@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated BUL paper and this repository."
+title: "Behavioral Utility Loss Evaluation under Differentially Private Event-Log Release"
+type: software
+authors:
+  - name: "BUL Project Authors"
+version: 1.0.0
+repository-code: "https://github.com/yang001a/BUL"
+abstract: >-
+  Reproducible implementation of the Behavioral Utility Loss evaluation
+  framework for case-level differentially private event-log publishing.
+keywords:
+  - behavioral utility loss
+  - differential privacy
+  - event logs
+  - process mining
+  - reproducible research

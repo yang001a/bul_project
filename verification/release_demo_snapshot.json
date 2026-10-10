@@ -1,0 +1,800 @@
+{
+  "behavior_statistics": {
+    "activity": {
+      "activities": [
+        {
+          "activity": "A",
+          "count": 1,
+          "probability": 0.14285714285714285
+        },
+        {
+          "activity": "B",
+          "count": 1,
+          "probability": 0.14285714285714285
+        },
+        {
+          "activity": "End",
+          "count": 1,
+          "probability": 0.14285714285714285
+        },
+        {
+          "activity": "Register",
+          "count": 1,
+          "probability": 0.14285714285714285
+        },
+        {
+          "activity": "Review",
+          "count": 1,
+          "probability": 0.14285714285714285
+        },
+        {
+          "activity": "Start",
+          "count": 1,
+          "probability": 0.14285714285714285
+        },
+        {
+          "activity": "Treat",
+          "count": 1,
+          "probability": 0.14285714285714285
+        }
+      ],
+      "total_events": 7
+    },
+    "dfg": {
+      "dropped_edge_occurrences": 0,
+      "dropped_edge_types": 0,
+      "edges": [
+        {
+          "count": 1,
+          "probability": 0.25,
+          "source": "A",
+          "target": "B"
+        },
+        {
+          "count": 1,
+          "probability": 0.25,
+          "source": "Register",
+          "target": "Treat"
+        },
+        {
+          "count": 1,
+          "probability": 0.25,
+          "source": "Review",
+          "target": "End"
+        },
+        {
+          "count": 1,
+          "probability": 0.25,
+          "source": "Start",
+          "target": "Review"
+        }
+      ],
+      "filtered_edges": [
+        {
+          "count": 1,
+          "probability": 0.25,
+          "source": "A",
+          "target": "B"
+        },
+        {
+          "count": 1,
+          "probability": 0.25,
+          "source": "Register",
+          "target": "Treat"
+        },
+        {
+          "count": 1,
+          "probability": 0.25,
+          "source": "Review",
+          "target": "End"
+        },
+        {
+          "count": 1,
+          "probability": 0.25,
+          "source": "Start",
+          "target": "Review"
+        }
+      ],
+      "min_support": 1,
+      "total_edge_occurrences": 4
+    },
+    "name": "G_raw",
+    "statistical_space": {
+      "min_edge_support": 1,
+      "top_k_variants": 3
+    },
+    "temporal": {
+      "edges": [
+        {
+          "edge_normalized_mean_seconds": 0.0,
+          "edge_support": 1,
+          "median_seconds": 0.0,
+          "observed_mean_seconds": 0.0,
+          "sample_count": 1,
+          "samples_seconds": [
+            0.0
+          ],
+          "source": "A",
+          "sum_seconds": 0.0,
+          "target": "B"
+        },
+        {
+          "edge_normalized_mean_seconds": 0.0,
+          "edge_support": 1,
+          "median_seconds": null,
+          "observed_mean_seconds": null,
+          "sample_count": 0,
+          "samples_seconds": [],
+          "source": "Register",
+          "sum_seconds": 0.0,
+          "target": "Treat"
+        },
+        {
+          "edge_normalized_mean_seconds": 3600.0,
+          "edge_support": 1,
+          "median_seconds": 3600.0,
+          "observed_mean_seconds": 3600.0,
+          "sample_count": 1,
+          "samples_seconds": [
+            3600.0
+          ],
+          "source": "Review",
+          "sum_seconds": 3600.0,
+          "target": "End"
+        },
+        {
+          "edge_normalized_mean_seconds": 3600.0,
+          "edge_support": 1,
+          "median_seconds": 3600.0,
+          "observed_mean_seconds": 3600.0,
+          "sample_count": 1,
+          "samples_seconds": [
+            3600.0
+          ],
+          "source": "Start",
+          "sum_seconds": 3600.0,
+          "target": "Review"
+        }
+      ],
+      "effective_edges": [
+        {
+          "samples_seconds": [
+            0.0
+          ],
+          "source": "A",
+          "target": "B"
+        },
+        {
+          "samples_seconds": [],
+          "source": "Register",
+          "target": "Treat"
+        },
+        {
+          "samples_seconds": [
+            3600.0
+          ],
+          "source": "Review",
+          "target": "End"
+        },
+        {
+          "samples_seconds": [
+            3600.0
+          ],
+          "source": "Start",
+          "target": "Review"
+        }
+      ],
+      "min_edge_support": 1,
+      "missing_interval_pairs": 1,
+      "total_transition_pairs": 4,
+      "valid_interval_pairs": 3
+    },
+    "trace_count": 3,
+    "variants": {
+      "candidate_scope": "G_raw preview; final release domain must be frozen after clipping",
+      "full_variants": [
+        {
+          "activities": [
+            "A",
+            "B"
+          ],
+          "count": 1,
+          "probability": 0.3333333333333333
+        },
+        {
+          "activities": [
+            "Register",
+            "Treat"
+          ],
+          "count": 1,
+          "probability": 0.3333333333333333
+        },
+        {
+          "activities": [
+            "Start",
+            "Review",
+            "End"
+          ],
+          "count": 1,
+          "probability": 0.3333333333333333
+        }
+      ],
+      "other": {
+        "count": 0,
+        "label": "OTHER",
+        "probability": 0.0
+      },
+      "top_k": 3,
+      "top_variants": [
+        {
+          "activities": [
+            "A",
+            "B"
+          ],
+          "count": 1,
+          "probability": 0.3333333333333333
+        },
+        {
+          "activities": [
+            "Register",
+            "Treat"
+          ],
+          "count": 1,
+          "probability": 0.3333333333333333
+        },
+        {
+          "activities": [
+            "Start",
+            "Review",
+            "End"
+          ],
+          "count": 1,
+          "probability": 0.3333333333333333
+        }
+      ],
+      "total_cases": 3,
+      "unique_variants": 3
+    }
+  },
+  "preprocessing": {
+    "cleaning_report": {
+      "dataset": "DEMO",
+      "dropped_core_events": 1,
+      "dropped_exact_duplicates": 0,
+      "exact_duplicate_events": 0,
+      "input_events": 8,
+      "invalid_timestamp_events": 0,
+      "missing_activity_events": 1,
+      "missing_case_id_events": 0,
+      "missing_timestamp_events": 1,
+      "negative_intervals_before_sort": 1,
+      "output_events": 7,
+      "retained_extension_columns": [],
+      "timestamp_tie_events": 2,
+      "unavailable_timestamp_events": 1
+    },
+    "dataset_report": {
+      "activities": 7,
+      "cases": 3,
+      "dataset": "DEMO",
+      "end_time": "2024-01-03T10:00:00+00:00",
+      "events": 7,
+      "negative_transition_intervals": 0,
+      "start_time": "2024-01-01T10:00:00+00:00",
+      "trace_length": {
+        "max": 3,
+        "mean": 2.3333333333333335,
+        "median": 2.0,
+        "p75": 2.5,
+        "p90": 2.8,
+        "p95": 2.9
+      },
+      "transition_seconds": {
+        "count": 3,
+        "median": 3600.0,
+        "p90": 3600.0,
+        "p95": 3600.0,
+        "p99": 3600.0
+      },
+      "unavailable_timestamp_events": 1,
+      "variants": 3,
+      "zero_transition_intervals": 1
+    },
+    "events": [
+      {
+        "activity": "Start",
+        "case_id": "case-1",
+        "timestamp": "2024-01-01T10:00:00+00:00"
+      },
+      {
+        "activity": "Review",
+        "case_id": "case-1",
+        "timestamp": "2024-01-01T11:00:00+00:00"
+      },
+      {
+        "activity": "End",
+        "case_id": "case-1",
+        "timestamp": "2024-01-01T12:00:00+00:00"
+      },
+      {
+        "activity": "Register",
+        "case_id": "case-2",
+        "timestamp": "2024-01-02T08:00:00+00:00"
+      },
+      {
+        "activity": "Treat",
+        "case_id": "case-2",
+        "timestamp": null
+      },
+      {
+        "activity": "A",
+        "case_id": "case-3",
+        "timestamp": "2024-01-03T10:00:00+00:00"
+      },
+      {
+        "activity": "B",
+        "case_id": "case-3",
+        "timestamp": "2024-01-03T10:00:00+00:00"
+      }
+    ],
+    "source_sha256": "a914d58cdaf626aaf60c96f4bbedb520fc5410e2c0237940c9ca21457bb0d1c5",
+    "traces": [
+      {
+        "activities": [
+          "Start",
+          "Review",
+          "End"
+        ],
+        "case_id": "case-1",
+        "timestamps": [
+          "2024-01-01T10:00:00+00:00",
+          "2024-01-01T11:00:00+00:00",
+          "2024-01-01T12:00:00+00:00"
+        ],
+        "transition_seconds": [
+          3600.0,
+          3600.0
+        ]
+      },
+      {
+        "activities": [
+          "Register",
+          "Treat"
+        ],
+        "case_id": "case-2",
+        "timestamps": [
+          "2024-01-02T08:00:00+00:00",
+          null
+        ],
+        "transition_seconds": [
+          null
+        ]
+      },
+      {
+        "activities": [
+          "A",
+          "B"
+        ],
+        "case_id": "case-3",
+        "timestamps": [
+          "2024-01-03T10:00:00+00:00",
+          "2024-01-03T10:00:00+00:00"
+        ],
+        "transition_seconds": [
+          0.0
+        ]
+      }
+    ]
+  },
+  "primitive_numerics": {
+    "bul": 0.39999999999999997,
+    "cosine_loss": 0.29289321881345254,
+    "entropy_deviation": 1.0,
+    "js": 0.3112781228052821,
+    "laplace_count": 11,
+    "laplace_time": 10.863810047423822,
+    "nemd": 0.5
+  },
+  "sensitivity": {
+    "activity": 3.0,
+    "edge": 2.0,
+    "l_max": 3,
+    "t_max": 10.0,
+    "time": 20.0,
+    "time_squared_sum": 200.0,
+    "time_sum": 20.0,
+    "variant": 1.0
+  },
+  "single_condition": {
+    "analysis_metadata": {
+      "activity_domain": [
+        "A",
+        "B",
+        "End",
+        "Register",
+        "Review",
+        "Start",
+        "Treat"
+      ],
+      "comparison_stages": {
+        "additivity_claimed": false,
+        "clipping": "G_raw versus G_clip",
+        "dp_noise": "G_clip versus G_DP",
+        "total": "G_raw versus G_DP"
+      },
+      "edge_domain": [
+        {
+          "source": "A",
+          "target": "B"
+        },
+        {
+          "source": "Register",
+          "target": "Treat"
+        },
+        {
+          "source": "Review",
+          "target": "End"
+        },
+        {
+          "source": "Start",
+          "target": "Review"
+        }
+      ],
+      "normalization_scale_policy": "caller_supplied_fixed_before_epsilon_run",
+      "process_quality_policy": "not_requested_for_this_condition",
+      "statistical_spaces_frozen_before_noise": true,
+      "temporal_domain": [
+        {
+          "normalization_scale": 3600.0,
+          "raw_edge_weight": 0.3333333333333333,
+          "source": "A",
+          "target": "B"
+        },
+        {
+          "normalization_scale": 3600.0,
+          "raw_edge_weight": 0.3333333333333333,
+          "source": "Review",
+          "target": "End"
+        },
+        {
+          "normalization_scale": 3600.0,
+          "raw_edge_weight": 0.3333333333333333,
+          "source": "Start",
+          "target": "Review"
+        }
+      ],
+      "temporal_weight_policy": "raw_edge_probability_renormalized_over_E_m",
+      "variant_domain": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "Register",
+          "Treat"
+        ],
+        [
+          "Start",
+          "Review",
+          "End"
+        ],
+        "OTHER"
+      ]
+    },
+    "config": {
+      "budget_strategy": "uniform",
+      "conformance_variant": null,
+      "dataset": "DEMO",
+      "dp_edge_mode": null,
+      "epsilon": 8.0,
+      "evaluate_process_quality": false,
+      "l_max": 3,
+      "method": "DP-full",
+      "min_edge_support": 1,
+      "process_model_noise_threshold": null,
+      "seed": 4,
+      "t_max": 10.0,
+      "top_k_variants": 3
+    },
+    "name": "BUL_single_experiment",
+    "phase": "7A",
+    "process_quality": null,
+    "release": {
+      "activity": [
+        {
+          "activity": "A",
+          "count": 4,
+          "probability": 0.26666666666666666
+        },
+        {
+          "activity": "B",
+          "count": 1,
+          "probability": 0.06666666666666667
+        },
+        {
+          "activity": "End",
+          "count": 6,
+          "probability": 0.4
+        },
+        {
+          "activity": "Register",
+          "count": 0,
+          "probability": 0.0
+        },
+        {
+          "activity": "Review",
+          "count": 1,
+          "probability": 0.06666666666666667
+        },
+        {
+          "activity": "Start",
+          "count": 1,
+          "probability": 0.06666666666666667
+        },
+        {
+          "activity": "Treat",
+          "count": 2,
+          "probability": 0.13333333333333333
+        }
+      ],
+      "budget_strategy": "uniform",
+      "component_epsilons": {
+        "activity": 2.0,
+        "edge": 2.0,
+        "time": 2.0,
+        "variant": 2.0
+      },
+      "composition": "sequential",
+      "dfg": [
+        {
+          "count": 0,
+          "probability": 0.0,
+          "source": "A",
+          "target": "B"
+        },
+        {
+          "count": 2,
+          "probability": 0.3333333333333333,
+          "source": "Register",
+          "target": "Treat"
+        },
+        {
+          "count": 1,
+          "probability": 0.16666666666666666,
+          "source": "Review",
+          "target": "End"
+        },
+        {
+          "count": 3,
+          "probability": 0.5,
+          "source": "Start",
+          "target": "Review"
+        }
+      ],
+      "dp_edge_mode": null,
+      "epsilon_spent": 8.0,
+      "epsilon_total": 8.0,
+      "method": "DP-full",
+      "name": "G_DP",
+      "release_domain": {
+        "min_edge_support": 1,
+        "source": "G_clip; frozen before Laplace noise",
+        "top_k_variants": 3
+      },
+      "seed": 4,
+      "sensitivities": {
+        "activity": 3.0,
+        "edge": 2.0,
+        "l_max": 3,
+        "t_max": 10.0,
+        "time": 20.0,
+        "time_squared_sum": 200.0,
+        "time_sum": 20.0,
+        "variant": 1.0
+      },
+      "temporal": [
+        {
+          "mean_seconds": 0.0,
+          "source": "A",
+          "squared_sum_seconds2": 49.10422277323471,
+          "sum_seconds": 0.0,
+          "target": "B"
+        },
+        {
+          "mean_seconds": 27.78457729337603,
+          "source": "Register",
+          "squared_sum_seconds2": 105.43487150911513,
+          "sum_seconds": 55.56915458675206,
+          "target": "Treat"
+        },
+        {
+          "mean_seconds": 49.04599898261912,
+          "source": "Review",
+          "squared_sum_seconds2": 533.6237045090147,
+          "sum_seconds": 49.04599898261912,
+          "target": "End"
+        },
+        {
+          "mean_seconds": 0.0,
+          "source": "Start",
+          "squared_sum_seconds2": 180.48838668132782,
+          "sum_seconds": 0.0,
+          "target": "Review"
+        }
+      ],
+      "temporal_epsilons": {
+        "composed_epsilon_time": 2.0,
+        "composition": "sequential",
+        "time_squared_sum": 1.0,
+        "time_sum": 1.0
+      },
+      "variant_other": {
+        "count": 2,
+        "label": "OTHER",
+        "probability": 0.4
+      },
+      "variants": [
+        {
+          "activities": [
+            "A",
+            "B"
+          ],
+          "count": 1,
+          "probability": 0.2
+        },
+        {
+          "activities": [
+            "Register",
+            "Treat"
+          ],
+          "count": 1,
+          "probability": 0.2
+        },
+        {
+          "activities": [
+            "Start",
+            "Review",
+            "End"
+          ],
+          "count": 1,
+          "probability": 0.2
+        }
+      ]
+    },
+    "result_record": {
+      "BUL": 0.36059183355221114,
+      "L_information": 0.21540928359442826,
+      "L_structure": 0.20022285022543276,
+      "L_temporal": 0.6661433668367724,
+      "budget_strategy": "uniform",
+      "conformance_variant": null,
+      "dataset": "DEMO",
+      "dp_edge_mode": null,
+      "epsilon": 8.0,
+      "fitness": null,
+      "generalization": null,
+      "l_max": 3,
+      "method": "DP-full",
+      "min_edge_support": 1,
+      "precision": null,
+      "process_quality_evaluated": false,
+      "seed": 4,
+      "t_max": 10.0,
+      "top_k_variants": 3
+    },
+    "stage_losses": {
+      "clipping": {
+        "BUL": 0.2216049382716049,
+        "L_information": 0.0,
+        "L_structure": 0.0,
+        "L_temporal": 0.6648148148148147
+      },
+      "dp_noise": {
+        "BUL": 0.1389868952806062,
+        "L_information": 0.21540928359442826,
+        "L_structure": 0.20022285022543276,
+        "L_temporal": 0.0013285520219576163
+      },
+      "total": {
+        "BUL": 0.36059183355221114,
+        "L_information": 0.21540928359442826,
+        "L_structure": 0.20022285022543276,
+        "L_temporal": 0.6661433668367724
+      }
+    },
+    "synthetic_log_generation": null,
+    "temporal_generation": {
+      "delta": 1e-08,
+      "metadata": {
+        "bounds_seconds": [
+          0.0,
+          10.0
+        ],
+        "delta": 1e-08,
+        "distribution": "truncated_normal",
+        "dp_post_processing_only": true,
+        "edges": [
+          {
+            "denominator": 1e-08,
+            "dp_edge_count": 0.0,
+            "dp_time_squared_sum": 49.10422277323471,
+            "dp_time_sum": 0.0,
+            "generated_sample_count": 1,
+            "raw_variance_seconds_squared": 4910422277.323471,
+            "reconstructed_mean_seconds": 0.0,
+            "reconstructed_variance_seconds_squared": 4910422277.323471,
+            "source": "A",
+            "target": "B"
+          },
+          {
+            "denominator": 2.0,
+            "dp_edge_count": 2.0,
+            "dp_time_squared_sum": 105.43487150911513,
+            "dp_time_sum": 55.56915458675206,
+            "generated_sample_count": 2,
+            "raw_variance_seconds_squared": -719.2652996170294,
+            "reconstructed_mean_seconds": 27.78457729337603,
+            "reconstructed_variance_seconds_squared": 1e-08,
+            "source": "Register",
+            "target": "Treat"
+          },
+          {
+            "denominator": 1.0,
+            "dp_edge_count": 1.0,
+            "dp_time_squared_sum": 533.6237045090147,
+            "dp_time_sum": 49.04599898261912,
+            "generated_sample_count": 1,
+            "raw_variance_seconds_squared": -1871.8863116940606,
+            "reconstructed_mean_seconds": 49.04599898261912,
+            "reconstructed_variance_seconds_squared": 1e-08,
+            "source": "Review",
+            "target": "End"
+          },
+          {
+            "denominator": 3.0,
+            "dp_edge_count": 3.0,
+            "dp_time_squared_sum": 180.48838668132782,
+            "dp_time_sum": 0.0,
+            "generated_sample_count": 3,
+            "raw_variance_seconds_squared": 60.16279556044261,
+            "reconstructed_mean_seconds": 0.0,
+            "reconstructed_variance_seconds_squared": 60.16279556044261,
+            "source": "Start",
+            "target": "Review"
+          }
+        ],
+        "mean_rule": "S'_T(e) / max(C'_E(e), delta)",
+        "module": "TemporalDistributionGenerator",
+        "raw_data_access": false,
+        "sample_count_rule": "max(round(C'_E(e)), 1)",
+        "seed": 4,
+        "status": "success",
+        "variance_rule": "max(Q'_T(e) / max(C'_E(e), delta) - mu'_e^2, delta)"
+      },
+      "sample_counts": [
+        {
+          "sample_count": 1,
+          "source": "A",
+          "target": "B"
+        },
+        {
+          "sample_count": 2,
+          "source": "Register",
+          "target": "Treat"
+        },
+        {
+          "sample_count": 1,
+          "source": "Review",
+          "target": "End"
+        },
+        {
+          "sample_count": 3,
+          "source": "Start",
+          "target": "Review"
+        }
+      ],
+      "seed": 4,
+      "t_max": 10.0
+    }
+  }
+}

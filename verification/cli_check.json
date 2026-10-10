@@ -1,0 +1,25 @@
+{
+  "commands": [
+    {
+      "command": "python main.py --help",
+      "status": "PASS"
+    },
+    {
+      "command": "python main.py preprocess --help",
+      "status": "PASS"
+    },
+    {
+      "command": "python main.py run-main --help",
+      "status": "PASS"
+    },
+    {
+      "command": "python main.py reproduce-paper --help",
+      "status": "PASS"
+    },
+    {
+      "command": "python main.py demo --help",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

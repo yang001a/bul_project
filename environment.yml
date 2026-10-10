@@ -1,0 +1,8 @@
+name: bul-paper-freeze
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13.9
+  - pip=25.3
+  - pip:
+      - -r requirements-lock.txt

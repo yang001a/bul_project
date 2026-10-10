@@ -1,0 +1,263 @@
+﻿old_module,new_module,symbol,old_signature,new_signature,status
+preprocessing/cleaning.py,preprocessing/cleaning.py,SchemaError,class,class,PASS
+preprocessing/cleaning.py,preprocessing/cleaning.py,normalize_and_clean,"(raw_events:pd.DataFrame, dataset:DatasetSpec, policy:PreprocessingConfig) -> tuple[pd.DataFrame, CleaningReport]","(raw_events:pd.DataFrame, dataset:DatasetSpec, policy:PreprocessingConfig) -> tuple[pd.DataFrame, CleaningReport]",PASS
+preprocessing/dataset_report.py,preprocessing/dataset_report.py,DatasetReport,class,class,PASS
+preprocessing/dataset_report.py,preprocessing/dataset_report.py,DatasetReport.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+preprocessing/dataset_report.py,preprocessing/dataset_report.py,build_dataset_report,"(dataset:str, events:pd.DataFrame, traces:list[Trace], cleaning_report:CleaningReport) -> DatasetReport","(dataset:str, events:pd.DataFrame, traces:list[Trace], cleaning_report:CleaningReport) -> DatasetReport",PASS
+preprocessing/models.py,preprocessing/models.py,CleaningReport,class,class,PASS
+preprocessing/models.py,preprocessing/models.py,CleaningReport.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+preprocessing/models.py,preprocessing/models.py,Phase1Result,class,class,PASS
+preprocessing/models.py,preprocessing/models.py,Trace,class,class,PASS
+preprocessing/models.py,preprocessing/models.py,Trace.length,(self) -> int,(self) -> int,PASS
+preprocessing/models.py,preprocessing/models.py,Trace.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+preprocessing/pipeline.py,preprocessing/pipeline.py,EmptyEventLogError,class,class,PASS
+preprocessing/pipeline.py,preprocessing/pipeline.py,preprocess_dataset,"(dataset:DatasetSpec, policy:PreprocessingConfig=DEFAULT_PREPROCESSING, *, reader:Reader=read_xes_dataframe) -> Phase1Result","(dataset:DatasetSpec, policy:PreprocessingConfig=DEFAULT_PREPROCESSING, *, reader:Reader=read_xes_dataframe) -> Phase1Result",PASS
+preprocessing/pipeline.py,preprocessing/pipeline.py,write_phase1_artifacts,"(result:Phase1Result, output_dir:str | Path, *, include_events:bool=True, include_traces:bool=True) -> dict[str, str]","(result:Phase1Result, output_dir:str | Path, *, include_events:bool=True, include_traces:bool=True) -> dict[str, str]",PASS
+preprocessing/traces.py,preprocessing/traces.py,build_traces,"(events:pd.DataFrame, *, sort_events:bool=True, transition_time_unit:str='seconds') -> list[Trace]","(events:pd.DataFrame, *, sort_events:bool=True, transition_time_unit:str='seconds') -> list[Trace]",PASS
+preprocessing/xes_reader.py,preprocessing/xes_reader.py,XESReadError,class,class,PASS
+preprocessing/xes_reader.py,preprocessing/xes_reader.py,read_xes_dataframe,"(path:str | Path, *, keep_extensions:bool=False) -> pd.DataFrame","(path:str | Path, *, keep_extensions:bool=False) -> pd.DataFrame",PASS
+preprocessing/xes_reader.py,preprocessing/xes_reader.py,sha256_file,"(path:str | Path, chunk_size:int=1024 * 1024) -> str","(path:str | Path, chunk_size:int=1024 * 1024) -> str",PASS
+behavior/_utils.py,behavior/_utils.py,normalize_counts,"(counts:Mapping[KeyT, int]) -> dict[KeyT, float]","(counts:Mapping[KeyT, int]) -> dict[KeyT, float]",PASS
+behavior/_utils.py,behavior/_utils.py,validate_positive_optional,"(value:int | None, name:str) -> None","(value:int | None, name:str) -> None",PASS
+behavior/_utils.py,behavior/_utils.py,validate_traces,"(traces:Sequence[Trace]) -> tuple[Trace, ...]","(traces:Sequence[Trace]) -> tuple[Trace, ...]",PASS
+behavior/activity.py,behavior/activity.py,activity_statistics,(traces:Sequence[Trace]) -> ActivityStatistics,(traces:Sequence[Trace]) -> ActivityStatistics,PASS
+behavior/dfg.py,behavior/dfg.py,dfg_statistics,"(traces:Sequence[Trace], *, min_support:int | None=None) -> DFGStatistics","(traces:Sequence[Trace], *, min_support:int | None=None) -> DFGStatistics",PASS
+behavior/models.py,behavior/models.py,ActivityStatistics,class,class,PASS
+behavior/models.py,behavior/models.py,ActivityStatistics.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+behavior/models.py,behavior/models.py,DFGStatistics,class,class,PASS
+behavior/models.py,behavior/models.py,DFGStatistics.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+behavior/models.py,behavior/models.py,GRawStatistics,class,class,PASS
+behavior/models.py,behavior/models.py,GRawStatistics.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+behavior/models.py,behavior/models.py,TemporalStatistics,class,class,PASS
+behavior/models.py,behavior/models.py,TemporalStatistics.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+behavior/models.py,behavior/models.py,VariantStatistics,class,class,PASS
+behavior/models.py,behavior/models.py,VariantStatistics.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+behavior/statistics.py,behavior/statistics.py,build_g_raw,"(traces:Sequence[Trace], *, top_k_variants:int | None=None, min_edge_support:int | None=None) -> GRawStatistics","(traces:Sequence[Trace], *, top_k_variants:int | None=None, min_edge_support:int | None=None) -> GRawStatistics",PASS
+behavior/temporal.py,behavior/temporal.py,temporal_statistics,"(traces:Sequence[Trace], *, min_edge_support:int | None=None) -> TemporalStatistics","(traces:Sequence[Trace], *, min_edge_support:int | None=None) -> TemporalStatistics",PASS
+behavior/variants.py,behavior/variants.py,variant_statistics,"(traces:Sequence[Trace], *, top_k:int | None=None) -> VariantStatistics","(traces:Sequence[Trace], *, top_k:int | None=None) -> VariantStatistics",PASS
+privacy/_validation.py,privacy/_validation.py,validate_epsilon,"(epsilon:float, name:str='epsilon') -> float","(epsilon:float, name:str='epsilon') -> float",PASS
+privacy/_validation.py,privacy/_validation.py,validate_experiment_seed,(seed:int) -> int,(seed:int) -> int,PASS
+privacy/_validation.py,privacy/_validation.py,validate_l_max,(l_max:int) -> int,(l_max:int) -> int,PASS
+privacy/_validation.py,privacy/_validation.py,validate_sensitivity,(sensitivity:float) -> float,(sensitivity:float) -> float,PASS
+privacy/_validation.py,privacy/_validation.py,validate_t_max,(t_max:float) -> float,(t_max:float) -> float,PASS
+privacy/budget.py,privacy/budget.py,allocate_privacy_budget,"(epsilon_total:float, strategy:str='uniform') -> PrivacyBudget","(epsilon_total:float, strategy:str='uniform') -> PrivacyBudget",PASS
+privacy/budget.py,privacy/budget.py,edge_only_epsilon,"(epsilon_total:float, mode:str=DEFAULT_DP_EDGE_MODE) -> float","(epsilon_total:float, mode:str=DEFAULT_DP_EDGE_MODE) -> float",PASS
+privacy/budget.py,privacy/budget.py,split_temporal_budget,"(epsilon_time:float) -> dict[str, float]","(epsilon_time:float) -> dict[str, float]",PASS
+privacy/clipping.py,privacy/clipping.py,clip_trace,"(trace:Trace, l_max:int, t_max:float) -> Trace","(trace:Trace, l_max:int, t_max:float) -> Trace",PASS
+privacy/clipping.py,privacy/clipping.py,clip_traces,"(traces:Sequence[Trace], l_max:int, t_max:float) -> tuple[Trace, ...]","(traces:Sequence[Trace], l_max:int, t_max:float) -> tuple[Trace, ...]",PASS
+privacy/laplace_dp.py,privacy/laplace_dp.py,laplace_release,"(value:float, sensitivity:float, epsilon:float, *, statistic:Literal['count', 'time']='count', seed:int | None=None, rng:_LaplaceRNG | None=None) -> int | float","(value:float, sensitivity:float, epsilon:float, *, statistic:Literal['count', 'time']='count', seed:int | None=None, rng:_LaplaceRNG | None=None) -> int | float",PASS
+privacy/models.py,privacy/models.py,DPReleaseStatistics,class,class,PASS
+privacy/models.py,privacy/models.py,DPReleaseStatistics.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+privacy/models.py,privacy/models.py,PrivacyBudget,class,class,PASS
+privacy/models.py,privacy/models.py,PrivacyBudget.composed_epsilon,(self) -> float,(self) -> float,PASS
+privacy/models.py,privacy/models.py,PrivacyBudget.to_dict,"(self) -> dict[str, float | str]","(self) -> dict[str, float | str]",PASS
+privacy/models.py,privacy/models.py,SensitivityBounds,class,class,PASS
+privacy/models.py,privacy/models.py,SensitivityBounds.time_squared_sum,(self) -> float,(self) -> float,PASS
+privacy/models.py,privacy/models.py,SensitivityBounds.time_sum,(self) -> float,(self) -> float,PASS
+privacy/models.py,privacy/models.py,SensitivityBounds.to_dict,"(self) -> dict[str, float | int]","(self) -> dict[str, float | int]",PASS
+privacy/release.py,privacy/release.py,dp_edge_only_release,"(g_clip:GRawStatistics, *, l_max:int, t_max:float, epsilon_total:float, seed:int, mode:str=DEFAULT_DP_EDGE_MODE) -> DPReleaseStatistics","(g_clip:GRawStatistics, *, l_max:int, t_max:float, epsilon_total:float, seed:int, mode:str=DEFAULT_DP_EDGE_MODE) -> DPReleaseStatistics",PASS
+privacy/release.py,privacy/release.py,dp_full_release,"(g_clip:GRawStatistics, *, l_max:int, t_max:float, epsilon_total:float, strategy:str='uniform', seed:int) -> DPReleaseStatistics","(g_clip:GRawStatistics, *, l_max:int, t_max:float, epsilon_total:float, strategy:str='uniform', seed:int) -> DPReleaseStatistics",PASS
+privacy/release.py,privacy/release.py,release_g_dp,"(g_clip:GRawStatistics, *, method:Literal['DP-full', 'DP-edge-only'], l_max:int, t_max:float, epsilon_total:float, seed:int, strategy:str='uniform', dp_edge_mode:str=DEFAULT_DP_EDGE_MODE) -> DPReleaseStatistics","(g_clip:GRawStatistics, *, method:Literal['DP-full', 'DP-edge-only'], l_max:int, t_max:float, epsilon_total:float, seed:int, strategy:str='uniform', dp_edge_mode:str=DEFAULT_DP_EDGE_MODE) -> DPReleaseStatistics",PASS
+privacy/sensitivity.py,privacy/sensitivity.py,calculate_sensitivity,"(l_max:int, t_max:float) -> SensitivityBounds","(l_max:int, t_max:float) -> SensitivityBounds",PASS
+privacy/temporal_generator.py,privacy/temporal_generator.py,TemporalDistributionGenerator,"class(self, *, t_max:float, seed:int, delta:float=DP_DENOMINATOR_DELTA) -> None","class(self, *, t_max:float, seed:int, delta:float=DP_DENOMINATOR_DELTA) -> None",PASS
+privacy/temporal_generator.py,privacy/temporal_generator.py,TemporalDistributionGenerator.generate,"(self, edge_counts:Mapping[Edge, float], time_sums:Mapping[Edge, float], time_squared_sums:Mapping[Edge, float]) -> TemporalDistributionResult","(self, edge_counts:Mapping[Edge, float], time_sums:Mapping[Edge, float], time_squared_sums:Mapping[Edge, float]) -> TemporalDistributionResult",PASS
+privacy/temporal_generator.py,privacy/temporal_generator.py,TemporalDistributionResult,class,class,PASS
+privacy/temporal_generator.py,privacy/temporal_generator.py,TemporalDistributionResult.metadata_json,(self) -> str,(self) -> str,PASS
+privacy/temporal_generator.py,privacy/temporal_generator.py,TemporalDistributionResult.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+metrics/_validation.py,metrics/_validation.py,align_vectors,"(reference:VectorInput, comparison:VectorInput) -> tuple[np.ndarray, np.ndarray]","(reference:VectorInput, comparison:VectorInput) -> tuple[np.ndarray, np.ndarray]",PASS
+metrics/_validation.py,metrics/_validation.py,normalize_distribution,"(vector:np.ndarray, name:str) -> np.ndarray","(vector:np.ndarray, name:str) -> np.ndarray",PASS
+metrics/_validation.py,metrics/_validation.py,validate_samples,"(samples:SampleInput, name:str) -> np.ndarray","(samples:SampleInput, name:str) -> np.ndarray",PASS
+metrics/cosine_metric.py,metrics/cosine_metric.py,calculate_cosine_loss,"(reference:VectorInput, comparison:VectorInput) -> float","(reference:VectorInput, comparison:VectorInput) -> float",PASS
+metrics/cosine_metric.py,metrics/cosine_metric.py,calculate_cosine_similarity,"(reference:VectorInput, comparison:VectorInput) -> float","(reference:VectorInput, comparison:VectorInput) -> float",PASS
+metrics/emd_metric.py,metrics/emd_metric.py,calculate_emd,"(reference:SampleInput, comparison:SampleInput) -> float","(reference:SampleInput, comparison:SampleInput) -> float",PASS
+metrics/emd_metric.py,metrics/emd_metric.py,calculate_normalized_emd,"(reference:SampleInput, comparison:SampleInput, normalization_scale:float) -> float","(reference:SampleInput, comparison:SampleInput, normalization_scale:float) -> float",PASS
+metrics/entropy_metric.py,metrics/entropy_metric.py,calculate_entropy_loss,"(reference:VectorInput, comparison:VectorInput) -> float","(reference:VectorInput, comparison:VectorInput) -> float",PASS
+metrics/js_metric.py,metrics/js_metric.py,calculate_js,"(reference:VectorInput, comparison:VectorInput) -> float","(reference:VectorInput, comparison:VectorInput) -> float",PASS
+bul/_utils.py,bul/_utils.py,validate_loss,"(value:float, name:str) -> float","(value:float, name:str) -> float",PASS
+bul/_utils.py,bul/_utils.py,validate_weights,"(weights:Mapping[KeyT, float], expected_keys:Sequence[KeyT], name:str) -> dict[KeyT, float]","(weights:Mapping[KeyT, float], expected_keys:Sequence[KeyT], name:str) -> dict[KeyT, float]",PASS
+bul/_utils.py,bul/_utils.py,weighted_loss,"(components:Mapping[str, float], weights:Mapping[str, float]) -> float","(components:Mapping[str, float], weights:Mapping[str, float]) -> float",PASS
+bul/bul_score.py,bul/bul_score.py,calculate_BUL,"(l_structure:float, l_temporal:float, l_information:float, *, weights:Mapping[str, float] | None=None) -> float","(l_structure:float, l_temporal:float, l_information:float, *, weights:Mapping[str, float] | None=None) -> float",PASS
+bul/bul_score.py,bul/bul_score.py,calculate_bul,"(l_structure:float, l_temporal:float, l_information:float, *, weights:Mapping[str, float] | None=None) -> float","(l_structure:float, l_temporal:float, l_information:float, *, weights:Mapping[str, float] | None=None) -> float",PASS
+bul/bul_score.py,bul/bul_score.py,calculate_fixed_entropy_weights,"(reference_matrix:Sequence[Sequence[float]] | np.ndarray) -> dict[str, float]","(reference_matrix:Sequence[Sequence[float]] | np.ndarray) -> dict[str, float]",PASS
+bul/information_loss.py,bul/information_loss.py,calculate_information_loss,"(reference_activities:VectorInput, comparison_activities:VectorInput, reference_edges:VectorInput, comparison_edges:VectorInput, *, weights:Mapping[str, float] | None=None) -> float","(reference_activities:VectorInput, comparison_activities:VectorInput, reference_edges:VectorInput, comparison_edges:VectorInput, *, weights:Mapping[str, float] | None=None) -> float",PASS
+bul/structure_loss.py,bul/structure_loss.py,calculate_structure_loss,"(reference_edges:VectorInput, comparison_edges:VectorInput, reference_variants:VectorInput, comparison_variants:VectorInput, *, weights:Mapping[str, float] | None=None) -> float","(reference_edges:VectorInput, comparison_edges:VectorInput, reference_variants:VectorInput, comparison_variants:VectorInput, *, weights:Mapping[str, float] | None=None) -> float",PASS
+bul/temporal_loss.py,bul/temporal_loss.py,calculate_temporal_loss,"(reference_times:Mapping[Edge, Sequence[float] | np.ndarray], comparison_times:Mapping[Edge, Sequence[float] | np.ndarray], *, edge_weights:Mapping[Edge, float], normalization_scales:Mapping[Edge, float]) -> float","(reference_times:Mapping[Edge, Sequence[float] | np.ndarray], comparison_times:Mapping[Edge, Sequence[float] | np.ndarray], *, edge_weights:Mapping[Edge, float], normalization_scales:Mapping[Edge, float]) -> float",PASS
+experiments/formal_runner.py,experiments/main_experiment.py,FormalCondition,class,class,PASS
+experiments/formal_runner.py,experiments/main_experiment.py,FormalCondition.checkpoint_key,(self) -> str,(self) -> str,PASS
+experiments/formal_runner.py,experiments/main_experiment.py,FormalCondition.formal_condition_id,(self) -> str,(self) -> str,PASS
+experiments/formal_runner.py,experiments/main_experiment.py,FormalCondition.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/formal_runner.py,experiments/main_experiment.py,FormalConditionExecutionError,class,class,PASS
+experiments/formal_runner.py,experiments/main_experiment.py,FormalExecutionPlan,class,class,PASS
+experiments/formal_runner.py,experiments/main_experiment.py,FormalExecutionPlan.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/formal_runner.py,experiments/main_experiment.py,FormalExecutionSummary,class,class,PASS
+experiments/formal_runner.py,experiments/main_experiment.py,FormalExecutionSummary.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/formal_runner.py,experiments/main_experiment.py,FormalExperimentRunner,"class(self, spec:FrozenExecutionSpec, phase7c_inputs:Sequence[Phase7CDatasetInput], output_dir:str | Path, *, executor:ConditionExecutor | None=None, project_root:str | Path=PROJECT_ROOT) -> None","class(self, spec:FrozenExecutionSpec, phase7c_inputs:Sequence[Phase7CDatasetInput], output_dir:str | Path, *, executor:ConditionExecutor | None=None, project_root:str | Path=PROJECT_ROOT) -> None",PASS
+experiments/formal_runner.py,experiments/main_experiment.py,FormalExperimentRunner.run,"(self, *, max_new_conditions:int | None=None) -> FormalExecutionSummary","(self, *, max_new_conditions:int | None=None) -> FormalExecutionSummary",PASS
+experiments/formal_runner.py,experiments/main_experiment.py,FormalRunIntegrityError,class,class,PASS
+experiments/formal_runner.py,experiments/main_experiment.py,FrozenDatasetExecutionSpec,class,class,PASS
+experiments/formal_runner.py,experiments/main_experiment.py,FrozenEvaluationLogSpec,class,class,PASS
+experiments/formal_runner.py,experiments/main_experiment.py,FrozenExecutionSpec,class,class,PASS
+experiments/formal_runner.py,experiments/main_experiment.py,FrozenExecutionSpec.build_dataset_inputs,"(self, phase7c_inputs:Sequence[Phase7CDatasetInput], *, include_process_quality_events:bool=False) -> tuple[DatasetExperimentInput, ...]","(self, phase7c_inputs:Sequence[Phase7CDatasetInput], *, include_process_quality_events:bool=False) -> tuple[DatasetExperimentInput, ...]",PASS
+experiments/formal_runner.py,experiments/main_experiment.py,FrozenExecutionSpec.dataset_names,"(self) -> tuple[str, ...]","(self) -> tuple[str, ...]",PASS
+experiments/formal_runner.py,experiments/main_experiment.py,FrozenExecutionSpec.scenario_id,(self) -> str,(self) -> str,PASS
+experiments/formal_runner.py,experiments/main_experiment.py,FrozenExecutionSpec.verify_source_files,(self) -> None,(self) -> None,PASS
+experiments/formal_runner.py,experiments/main_experiment.py,build_code_manifest,"(project_root:str | Path=PROJECT_ROOT) -> dict[str, str]","(project_root:str | Path=PROJECT_ROOT) -> dict[str, str]",PASS
+experiments/formal_runner.py,experiments/main_experiment.py,build_formal_execution_plan,"(spec:FrozenExecutionSpec, *, project_root:str | Path=PROJECT_ROOT) -> FormalExecutionPlan","(spec:FrozenExecutionSpec, *, project_root:str | Path=PROJECT_ROOT) -> FormalExecutionPlan",PASS
+experiments/formal_runner.py,experiments/main_experiment.py,current_runtime_metadata,"() -> dict[str, str | None]","() -> dict[str, str | None]",PASS
+experiments/formal_runner.py,experiments/main_experiment.py,load_frozen_execution_spec,(final_config_path:str | Path) -> FrozenExecutionSpec,(final_config_path:str | Path) -> FrozenExecutionSpec,PASS
+experiments/formal_runner.py,experiments/main_experiment.py,write_formal_execution_plan,"(plan:FormalExecutionPlan, output_dir:str | Path) -> Path","(plan:FormalExecutionPlan, output_dir:str | Path) -> Path",PASS
+experiments/derived_analysis.py,experiments/bul_analysis.py,Phase6DerivedAnalysisError,class,class,PASS
+experiments/derived_analysis.py,experiments/bul_analysis.py,build_cross_dataset_summary,(enriched:pd.DataFrame) -> pd.DataFrame,(enriched:pd.DataFrame) -> pd.DataFrame,PASS
+experiments/derived_analysis.py,experiments/bul_analysis.py,build_dimension_ablation,(enriched:pd.DataFrame) -> pd.DataFrame,(enriched:pd.DataFrame) -> pd.DataFrame,PASS
+experiments/derived_analysis.py,experiments/bul_analysis.py,build_rerun_source_lock,"(reference_dir:str | Path, phase7c_dir:str | Path) -> dict[str, str]","(reference_dir:str | Path, phase7c_dir:str | Path) -> dict[str, str]",PASS
+experiments/derived_analysis.py,experiments/bul_analysis.py,calculate_frozen_entropy_weights,"(smoke_stage:pd.DataFrame, *, source_sha256:str) -> tuple[dict[str, dict[str, float]], dict[str, Any]]","(smoke_stage:pd.DataFrame, *, source_sha256:str) -> tuple[dict[str, dict[str, float]], dict[str, Any]]",PASS
+experiments/derived_analysis.py,experiments/bul_analysis.py,enrich_bul_results,"(main_result:pd.DataFrame, weights_by_dataset:Mapping[str, Mapping[str, float]]) -> pd.DataFrame","(main_result:pd.DataFrame, weights_by_dataset:Mapping[str, Mapping[str, float]]) -> pd.DataFrame",PASS
+experiments/derived_analysis.py,experiments/bul_analysis.py,run_phase6_derived_analysis,"(reference_dir:str | Path, phase7c_dir:str | Path, output_dir:str | Path, *, project_root:str | Path=PROJECT_ROOT, source_lock:Mapping[str, str] | None=None) -> dict[str, Any]","(reference_dir:str | Path, phase7c_dir:str | Path, output_dir:str | Path, *, project_root:str | Path=PROJECT_ROOT, source_lock:Mapping[str, str] | None=None) -> dict[str, Any]",PASS
+experiments/sensitivity_analysis.py,experiments/sensitivity.py,Phase6SensitivityError,class,class,PASS
+experiments/sensitivity_analysis.py,experiments/sensitivity.py,SensitivityCondition,class,class,PASS
+experiments/sensitivity_analysis.py,experiments/sensitivity.py,SensitivityCondition.checkpoint_key,(self) -> str,(self) -> str,PASS
+experiments/sensitivity_analysis.py,experiments/sensitivity.py,SensitivityCondition.condition_id,(self) -> str,(self) -> str,PASS
+experiments/sensitivity_analysis.py,experiments/sensitivity.py,SensitivityCondition.is_reference_reuse,(self) -> bool,(self) -> bool,PASS
+experiments/sensitivity_analysis.py,experiments/sensitivity.py,SensitivityCondition.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/sensitivity_analysis.py,experiments/sensitivity.py,SensitivityExecutionSummary,class,class,PASS
+experiments/sensitivity_analysis.py,experiments/sensitivity.py,SensitivityExecutionSummary.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/sensitivity_analysis.py,experiments/sensitivity.py,SensitivityExperimentRunner,"class(self, sources:SensitivitySources, output_dir:str | Path, *, executor:ConditionExecutor | None=None, project_root:str | Path=PROJECT_ROOT) -> None","class(self, sources:SensitivitySources, output_dir:str | Path, *, executor:ConditionExecutor | None=None, project_root:str | Path=PROJECT_ROOT) -> None",PASS
+experiments/sensitivity_analysis.py,experiments/sensitivity.py,SensitivityExperimentRunner.completed_new_conditions,(self) -> int,(self) -> int,PASS
+experiments/sensitivity_analysis.py,experiments/sensitivity.py,SensitivityExperimentRunner.remaining_new_conditions,(self) -> int,(self) -> int,PASS
+experiments/sensitivity_analysis.py,experiments/sensitivity.py,SensitivityExperimentRunner.run,"(self, traces:Sequence[Trace] | None, *, max_new_conditions:int | None=None) -> SensitivityExecutionSummary","(self, traces:Sequence[Trace] | None, *, max_new_conditions:int | None=None) -> SensitivityExecutionSummary",PASS
+experiments/sensitivity_analysis.py,experiments/sensitivity.py,SensitivitySources,class,class,PASS
+experiments/sensitivity_analysis.py,experiments/sensitivity.py,build_sensitivity_conditions,"() -> tuple[SensitivityCondition, ...]","() -> tuple[SensitivityCondition, ...]",PASS
+experiments/sensitivity_analysis.py,experiments/sensitivity.py,build_sensitivity_plan,"(sources:SensitivitySources, *, project_root:str | Path=PROJECT_ROOT) -> dict[str, Any]","(sources:SensitivitySources, *, project_root:str | Path=PROJECT_ROOT) -> dict[str, Any]",PASS
+experiments/sensitivity_analysis.py,experiments/sensitivity.py,load_sensitivity_sources,"(config_path:str | Path, reference_dir:str | Path, derived_dir:str | Path, *, project_root:str | Path=PROJECT_ROOT) -> SensitivitySources","(config_path:str | Path, reference_dir:str | Path, derived_dir:str | Path, *, project_root:str | Path=PROJECT_ROOT) -> SensitivitySources",PASS
+experiments/sensitivity_analysis.py,experiments/sensitivity.py,summarize_sensitivity_records,"(records:Sequence[Mapping[str, Any]]) -> pd.DataFrame","(records:Sequence[Mapping[str, Any]]) -> pd.DataFrame",PASS
+experiments/sensitivity_analysis.py,experiments/sensitivity.py,write_sensitivity_plan,"(plan:Mapping[str, Any], output_dir:str | Path) -> Path","(plan:Mapping[str, Any], output_dir:str | Path) -> Path",PASS
+validation/formal_runner.py,validation/runner.py,ProcessQualityExecutionPlan,class,class,PASS
+validation/formal_runner.py,validation/runner.py,ProcessQualityExecutionPlan.plan_sha256,(self) -> str,(self) -> str,PASS
+validation/formal_runner.py,validation/runner.py,ProcessQualityExecutionPlan.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+validation/formal_runner.py,validation/runner.py,ProcessQualityFormalConditionError,class,class,PASS
+validation/formal_runner.py,validation/runner.py,ProcessQualityFormalIntegrityError,class,class,PASS
+validation/formal_runner.py,validation/runner.py,ProcessQualityFormalSummary,class,class,PASS
+validation/formal_runner.py,validation/runner.py,ProcessQualityFormalSummary.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+validation/formal_runner.py,validation/runner.py,RepresentativeProcessQualityRunner,"class(self, scope:FrozenProcessQualityScope, reference_dir:str | Path, evaluation_events:pd.DataFrame | EvaluationEventsLoader, output_dir:str | Path, *, config_path:str | Path, evaluator_factory:EvaluatorFactory | None=None, project_root:str | Path=PROJECT_ROOT, _scope_source_validator:ScopeSourceValidator | None=None) -> None","class(self, scope:FrozenProcessQualityScope, reference_dir:str | Path, evaluation_events:pd.DataFrame | EvaluationEventsLoader, output_dir:str | Path, *, config_path:str | Path, evaluator_factory:EvaluatorFactory | None=None, project_root:str | Path=PROJECT_ROOT, _scope_source_validator:ScopeSourceValidator | None=None) -> None",PASS
+validation/formal_runner.py,validation/runner.py,RepresentativeProcessQualityRunner.run,"(self, *, max_new_conditions:int | None=None) -> ProcessQualityFormalSummary","(self, *, max_new_conditions:int | None=None) -> ProcessQualityFormalSummary",PASS
+validation/formal_runner.py,validation/runner.py,build_process_quality_execution_plan,"(scope:FrozenProcessQualityScope, *, project_root:str | Path=PROJECT_ROOT) -> ProcessQualityExecutionPlan","(scope:FrozenProcessQualityScope, *, project_root:str | Path=PROJECT_ROOT) -> ProcessQualityExecutionPlan",PASS
+validation/formal_runner.py,validation/runner.py,validate_disjoint_directories,"(reference_dir:str | Path, output_dir:str | Path) -> tuple[Path, Path]","(reference_dir:str | Path, output_dir:str | Path) -> tuple[Path, Path]",PASS
+validation/formal_runner.py,validation/runner.py,write_process_quality_execution_plan,"(plan:ProcessQualityExecutionPlan, output_dir:str | Path) -> Path","(plan:ProcessQualityExecutionPlan, output_dir:str | Path) -> Path",PASS
+experiments/single_run.py,experiments/single_run.py,LossDimensions,class,class,PASS
+experiments/single_run.py,experiments/single_run.py,LossDimensions.to_dict,"(self) -> dict[str, float | None]","(self) -> dict[str, float | None]",PASS
+experiments/single_run.py,experiments/single_run.py,SingleExperimentConfig,class,class,PASS
+experiments/single_run.py,experiments/single_run.py,SingleExperimentConfig.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/single_run.py,experiments/single_run.py,SingleExperimentResult,class,class,PASS
+experiments/single_run.py,experiments/single_run.py,SingleExperimentResult.metadata_json,(self) -> str,(self) -> str,PASS
+experiments/single_run.py,experiments/single_run.py,SingleExperimentResult.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/single_run.py,experiments/single_run.py,SingleExperimentResult.to_record,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/single_run.py,experiments/single_run.py,SingleExperimentResult.total_losses,(self) -> LossDimensions,(self) -> LossDimensions,PASS
+experiments/single_run.py,experiments/single_run.py,SingleExperimentRunner,"class(self, config:SingleExperimentConfig) -> None","class(self, config:SingleExperimentConfig) -> None",PASS
+experiments/single_run.py,experiments/single_run.py,SingleExperimentRunner.run,"(self, traces:Sequence[Trace], *, normalization_scales:Mapping[Edge, float] | None=None, evaluation_events:pd.DataFrame | None=None, evaluation_log_id:str | None=None) -> SingleExperimentResult","(self, traces:Sequence[Trace], *, normalization_scales:Mapping[Edge, float] | None=None, evaluation_events:pd.DataFrame | None=None, evaluation_log_id:str | None=None) -> SingleExperimentResult",PASS
+experiments/single_run.py,experiments/single_run.py,run_single_experiment,"(traces:Sequence[Trace], config:SingleExperimentConfig, *, normalization_scales:Mapping[Edge, float] | None=None, evaluation_events:pd.DataFrame | None=None, evaluation_log_id:str | None=None) -> SingleExperimentResult","(traces:Sequence[Trace], config:SingleExperimentConfig, *, normalization_scales:Mapping[Edge, float] | None=None, evaluation_events:pd.DataFrame | None=None, evaluation_log_id:str | None=None) -> SingleExperimentResult",PASS
+experiments/single_run.py,experiments/single_run.py,write_single_experiment_artifacts,"(result:SingleExperimentResult, output_dir:str | Path) -> dict[str, str]","(result:SingleExperimentResult, output_dir:str | Path) -> dict[str, str]",PASS
+experiments/batch_run.py,experiments/batch_run.py,BatchCondition,class,class,PASS
+experiments/batch_run.py,experiments/batch_run.py,BatchCondition.condition_id,(self) -> str,(self) -> str,PASS
+experiments/batch_run.py,experiments/batch_run.py,BatchCondition.single_config,"(self, dataset_input:DatasetExperimentInput) -> SingleExperimentConfig","(self, dataset_input:DatasetExperimentInput) -> SingleExperimentConfig",PASS
+experiments/batch_run.py,experiments/batch_run.py,BatchCondition.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/batch_run.py,experiments/batch_run.py,BatchExperimentConfig,class,class,PASS
+experiments/batch_run.py,experiments/batch_run.py,BatchExperimentConfig.expected_dp_conditions,"(self, dataset_count:int) -> int","(self, dataset_count:int) -> int",PASS
+experiments/batch_run.py,experiments/batch_run.py,BatchExperimentConfig.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/batch_run.py,experiments/batch_run.py,BatchExperimentResult,class,class,PASS
+experiments/batch_run.py,experiments/batch_run.py,BatchExperimentResult.experiment_records,"(self) -> list[dict[str, Any]]","(self) -> list[dict[str, Any]]",PASS
+experiments/batch_run.py,experiments/batch_run.py,BatchExperimentResult.stage_records,"(self) -> list[dict[str, Any]]","(self) -> list[dict[str, Any]]",PASS
+experiments/batch_run.py,experiments/batch_run.py,BatchExperimentResult.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/batch_run.py,experiments/batch_run.py,BatchExperimentRunner,"class(self, config:BatchExperimentConfig) -> None","class(self, config:BatchExperimentConfig) -> None",PASS
+experiments/batch_run.py,experiments/batch_run.py,BatchExperimentRunner.build_plan,"(self, dataset_inputs:Sequence[DatasetExperimentInput]) -> tuple[BatchCondition, ...]","(self, dataset_inputs:Sequence[DatasetExperimentInput]) -> tuple[BatchCondition, ...]",PASS
+experiments/batch_run.py,experiments/batch_run.py,BatchExperimentRunner.run,"(self, dataset_inputs:Sequence[DatasetExperimentInput]) -> BatchExperimentResult","(self, dataset_inputs:Sequence[DatasetExperimentInput]) -> BatchExperimentResult",PASS
+experiments/batch_run.py,experiments/batch_run.py,DatasetExperimentInput,class,class,PASS
+experiments/batch_run.py,experiments/batch_run.py,DatasetExperimentInput.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/batch_run.py,experiments/batch_run.py,ProcessQualitySelection,class,class,PASS
+experiments/batch_run.py,experiments/batch_run.py,ProcessQualitySelection.matches,"(self, dataset:str, epsilon:float, seed:int, budget_strategy:str) -> bool","(self, dataset:str, epsilon:float, seed:int, budget_strategy:str) -> bool",PASS
+experiments/batch_run.py,experiments/batch_run.py,ProcessQualitySelection.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/batch_run.py,experiments/batch_run.py,run_batch_experiments,"(dataset_inputs:Sequence[DatasetExperimentInput], config:BatchExperimentConfig) -> BatchExperimentResult","(dataset_inputs:Sequence[DatasetExperimentInput], config:BatchExperimentConfig) -> BatchExperimentResult",PASS
+experiments/batch_run.py,experiments/batch_run.py,write_batch_experiment_artifacts,"(result:BatchExperimentResult, output_dir:str | Path) -> dict[str, str]","(result:BatchExperimentResult, output_dir:str | Path) -> dict[str, str]",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,DatasetParameterAnalysis,class,class,PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,DatasetParameterAnalysis.consistency_for,"(self, k:int, tau:int) -> VariantEdgeConsistencyRow","(self, k:int, tau:int) -> VariantEdgeConsistencyRow",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,DatasetParameterAnalysis.coverage_for,"(self, k:int) -> VariantCoverageRow","(self, k:int) -> VariantCoverageRow",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,DatasetParameterAnalysis.threshold_for,"(self, tau:int) -> EdgeThresholdRow","(self, tau:int) -> EdgeThresholdRow",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,DatasetProfile,class,class,PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,DatasetProfile.to_row,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,EdgeNormalizationFactor,class,class,PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,EdgeNormalizationFactor.to_dict,"(self, *, selected_for_experiment:bool) -> dict[str, Any]","(self, *, selected_for_experiment:bool) -> dict[str, Any]",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,EdgeThresholdRow,class,class,PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,EdgeThresholdRow.to_row,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,EvaluationLogMetadata,class,class,PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,EvaluationLogMetadata.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,FrozenConfigError,class,class,PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,FrozenDatasetParameters,class,class,PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,FrozenDatasetParameters.normalization_scales,"(self) -> dict[Edge, float]","(self) -> dict[Edge, float]",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,FrozenDatasetParameters.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,Phase7CDatasetInput,class,class,PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,Phase7CDatasetInput.from_phase1_result,"(cls, result:Phase1Result, *, include_evaluation_log:bool, evaluation_log_id:str | None=None) -> 'Phase7CDatasetInput'","(cls, result:Phase1Result, *, include_evaluation_log:bool, evaluation_log_id:str | None=None) -> 'Phase7CDatasetInput'",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,Phase7CPolicy,class,class,PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,Phase7CPolicy.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,Phase7CPreflightResult,class,class,PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,Phase7CPreflightResult.parameter_for,"(self, dataset:str) -> FrozenDatasetParameters","(self, dataset:str) -> FrozenDatasetParameters",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,Phase7CPreflightResult.to_preflight_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,Phase7CSmokeEvidence,class,class,PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,Phase7CSmokeEvidence.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,ProcessQualityFreezeSettings,class,class,PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,ProcessQualityFreezeSettings.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,VariantCoverageRow,class,class,PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,VariantCoverageRow.to_row,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,VariantEdgeConsistencyRow,class,class,PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,VariantEdgeConsistencyRow.to_row,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,analyze_phase7c_dataset,"(dataset_input:Phase7CDatasetInput, policy:Phase7CPolicy=Phase7CPolicy()) -> DatasetParameterAnalysis","(dataset_input:Phase7CDatasetInput, policy:Phase7CPolicy=Phase7CPolicy()) -> DatasetParameterAnalysis",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,build_evaluation_log_metadata,"(events:pd.DataFrame, evaluation_log_id:str) -> EvaluationLogMetadata","(events:pd.DataFrame, evaluation_log_id:str) -> EvaluationLogMetadata",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,build_frozen_dataset_inputs,"(preflight:Phase7CPreflightResult, dataset_inputs:Sequence[Phase7CDatasetInput]) -> tuple[DatasetExperimentInput, ...]","(preflight:Phase7CPreflightResult, dataset_inputs:Sequence[Phase7CDatasetInput]) -> tuple[DatasetExperimentInput, ...]",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,finalize_phase7c_parameters,"(preflight:Phase7CPreflightResult, smoke_evidence:Phase7CSmokeEvidence) -> Phase7CPreflightResult","(preflight:Phase7CPreflightResult, smoke_evidence:Phase7CSmokeEvidence) -> Phase7CPreflightResult",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,run_phase7c_smoke_test,"(preflight:Phase7CPreflightResult, dataset_inputs:Sequence[Phase7CDatasetInput], output_dir:str | Path) -> tuple[BatchExperimentResult, Phase7CSmokeEvidence]","(preflight:Phase7CPreflightResult, dataset_inputs:Sequence[Phase7CDatasetInput], output_dir:str | Path) -> tuple[BatchExperimentResult, Phase7CSmokeEvidence]",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,select_phase7c_parameters,"(analyses:Sequence[DatasetParameterAnalysis], policy:Phase7CPolicy=Phase7CPolicy(), *, process_quality:ProcessQualityFreezeSettings | None=None) -> Phase7CPreflightResult","(analyses:Sequence[DatasetParameterAnalysis], policy:Phase7CPolicy=Phase7CPolicy(), *, process_quality:ProcessQualityFreezeSettings | None=None) -> Phase7CPreflightResult",PASS
+experiments/parameter_freeze.py,experiments/parameter_freeze.py,write_phase7c_artifacts,"(result:Phase7CPreflightResult, output_dir:str | Path) -> dict[str, str]","(result:Phase7CPreflightResult, output_dir:str | Path) -> dict[str, str]",PASS
+validation/synthetic_log.py,validation/synthetic_log.py,MissingTemporalEdgeError,"class(self, missing_edges:tuple[Edge, ...], metadata:dict[str, Any]) -> None","class(self, missing_edges:tuple[Edge, ...], metadata:dict[str, Any]) -> None",PASS
+validation/synthetic_log.py,validation/synthetic_log.py,SyntheticLogGenerator,"class(self, *, seed:int) -> None","class(self, *, seed:int) -> None",PASS
+validation/synthetic_log.py,validation/synthetic_log.py,SyntheticLogGenerator.generate,"(self, variant_counts:Mapping[Variant, float], temporal_distributions:TemporalDistributionResult, *, other_count:float=0) -> SyntheticLogResult","(self, variant_counts:Mapping[Variant, float], temporal_distributions:TemporalDistributionResult, *, other_count:float=0) -> SyntheticLogResult",PASS
+validation/synthetic_log.py,validation/synthetic_log.py,SyntheticLogResult,class,class,PASS
+validation/synthetic_log.py,validation/synthetic_log.py,SyntheticLogResult.metadata_json,(self) -> str,(self) -> str,PASS
+validation/process_model.py,validation/process_model.py,PetriNetArtifact,class,class,PASS
+validation/process_model.py,validation/process_model.py,ProcessModelEvaluator,"class(self, *, conformance_variant:ConformanceVariant, noise_threshold:float=0.0, show_progress:bool=False) -> None","class(self, *, conformance_variant:ConformanceVariant, noise_threshold:float=0.0, show_progress:bool=False) -> None",PASS
+validation/process_model.py,validation/process_model.py,ProcessModelEvaluator.discover,"(self, synthetic_log:SyntheticLogResult) -> PetriNetArtifact","(self, synthetic_log:SyntheticLogResult) -> PetriNetArtifact",PASS
+validation/process_model.py,validation/process_model.py,ProcessModelEvaluator.evaluate,"(self, synthetic_log:SyntheticLogResult, evaluation_events:pd.DataFrame, *, evaluation_log_id:str) -> ProcessQualityResult","(self, synthetic_log:SyntheticLogResult, evaluation_events:pd.DataFrame, *, evaluation_log_id:str) -> ProcessQualityResult",PASS
+validation/process_model.py,validation/process_model.py,ProcessQualityResult,class,class,PASS
+validation/process_model.py,validation/process_model.py,ProcessQualityResult.metadata_json,(self) -> str,(self) -> str,PASS
+validation/process_model.py,validation/process_model.py,ProcessQualityResult.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+validation/artifacts.py,validation/artifacts.py,FileDigest,class,class,PASS
+validation/artifacts.py,validation/artifacts.py,FileDigest.to_dict,"(self) -> dict[str, str | int]","(self) -> dict[str, str | int]",PASS
+validation/artifacts.py,validation/artifacts.py,ProcessQualityArtifactError,class,class,PASS
+validation/artifacts.py,validation/artifacts.py,VerifiedArtifact,class,class,PASS
+validation/artifacts.py,validation/artifacts.py,VerifiedArtifact.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+validation/artifacts.py,validation/artifacts.py,is_committed_artifact,"(path:str | Path, *, expected_sha256:str | None=None) -> bool","(path:str | Path, *, expected_sha256:str | None=None) -> bool",PASS
+validation/artifacts.py,validation/artifacts.py,is_temporary_artifact_path,(path:str | Path) -> bool,(path:str | Path) -> bool,PASS
+validation/artifacts.py,validation/artifacts.py,petri_net_semantic_sha256,"(net:PetriNet, initial_marking:Marking, final_marking:Marking) -> str","(net:PetriNet, initial_marking:Marking, final_marking:Marking) -> str",PASS
+validation/artifacts.py,validation/artifacts.py,sha256_file,(path:str | Path) -> str,(path:str | Path) -> str,PASS
+validation/artifacts.py,validation/artifacts.py,synthetic_event_semantic_sha256,"(events:pd.DataFrame, *, timestamp_precision:TimestampPrecision='microsecond') -> str","(events:pd.DataFrame, *, timestamp_precision:TimestampPrecision='microsecond') -> str",PASS
+validation/artifacts.py,validation/artifacts.py,write_petri_pnml_atomic,"(model:PetriNetArtifact, destination:str | Path, *, overwrite:bool=False) -> VerifiedArtifact","(model:PetriNetArtifact, destination:str | Path, *, overwrite:bool=False) -> VerifiedArtifact",PASS
+validation/artifacts.py,validation/artifacts.py,write_process_quality_metadata_json_atomic,"(condition:Mapping[str, Any], synthetic_log:SyntheticLogResult, quality:ProcessQualityResult, synthetic_xes:VerifiedArtifact, petri_pnml:VerifiedArtifact, destination:str | Path, *, temporal_metadata:Mapping[str, Any] | None=None, overwrite:bool=False) -> FileDigest","(condition:Mapping[str, Any], synthetic_log:SyntheticLogResult, quality:ProcessQualityResult, synthetic_xes:VerifiedArtifact, petri_pnml:VerifiedArtifact, destination:str | Path, *, temporal_metadata:Mapping[str, Any] | None=None, overwrite:bool=False) -> FileDigest",PASS
+validation/artifacts.py,validation/artifacts.py,write_process_quality_result_csv_atomic,"(condition:Mapping[str, Any], quality:ProcessQualityResult, synthetic_xes:VerifiedArtifact, petri_pnml:VerifiedArtifact, destination:str | Path, *, overwrite:bool=False) -> FileDigest","(condition:Mapping[str, Any], quality:ProcessQualityResult, synthetic_xes:VerifiedArtifact, petri_pnml:VerifiedArtifact, destination:str | Path, *, overwrite:bool=False) -> FileDigest",PASS
+validation/artifacts.py,validation/artifacts.py,write_synthetic_xes_atomic,"(synthetic_log:SyntheticLogResult, destination:str | Path, *, overwrite:bool=False) -> VerifiedArtifact","(synthetic_log:SyntheticLogResult, destination:str | Path, *, overwrite:bool=False) -> VerifiedArtifact",PASS
+validation/evaluation_sample.py,validation/evaluation_sample.py,EvaluationSampleIntegrityError,class,class,PASS
+validation/evaluation_sample.py,validation/evaluation_sample.py,build_fixed_bpic2017_evaluation_sample,(events:pd.DataFrame) -> pd.DataFrame,(events:pd.DataFrame) -> pd.DataFrame,PASS
+validation/evaluation_sample.py,validation/evaluation_sample.py,deterministic_case_sample,"(events:pd.DataFrame, *, sample_size_cases:int, seed:int, policy_version:str=EVALUATION_SAMPLE_POLICY_VERSION) -> pd.DataFrame","(events:pd.DataFrame, *, sample_size_cases:int, seed:int, policy_version:str=EVALUATION_SAMPLE_POLICY_VERSION) -> pd.DataFrame",PASS
+validation/evaluation_sample.py,validation/evaluation_sample.py,expected_evaluation_sample_metadata,"() -> dict[str, Any]","() -> dict[str, Any]",PASS
+validation/evaluation_sample.py,validation/evaluation_sample.py,expected_evaluation_sampling_policy,"() -> dict[str, Any]","() -> dict[str, Any]",PASS
+validation/release.py,validation/release.py,ProcessQualityReleaseError,class,class,PASS
+validation/release.py,validation/release.py,ProcessQualityReleaseResult,class,class,PASS
+validation/release.py,validation/release.py,generate_process_quality_release,"(experiment_metadata:Mapping[str, Any], *, expected_epsilon:float, expected_seed:int, frozen_t_max:float) -> ProcessQualityReleaseResult","(experiment_metadata:Mapping[str, Any], *, expected_epsilon:float, expected_seed:int, frozen_t_max:float) -> ProcessQualityReleaseResult",PASS
+validation/scope.py,validation/scope.py,FrozenProcessQualityScope,class,class,PASS
+validation/scope.py,validation/scope.py,FrozenProcessQualityScope.scope_sha256,(self) -> str,(self) -> str,PASS
+validation/scope.py,validation/scope.py,FrozenProcessQualityScope.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+validation/scope.py,validation/scope.py,PreregisteredSeedSelection,class,class,PASS
+validation/scope.py,validation/scope.py,PreregisteredSeedSelection.to_dict,"(self) -> dict[str, Any]","(self) -> dict[str, Any]",PASS
+validation/scope.py,validation/scope.py,ProcessQualityScopeIntegrityError,class,class,PASS
+validation/scope.py,validation/scope.py,build_process_quality_scope,"(plan_path:str | Path, formal_manifest_path:str | Path, config_path:str | Path, *, checkpoint_root:str | Path | None=None) -> FrozenProcessQualityScope","(plan_path:str | Path, formal_manifest_path:str | Path, config_path:str | Path, *, checkpoint_root:str | Path | None=None) -> FrozenProcessQualityScope",PASS
+validation/scope.py,validation/scope.py,load_process_quality_scope,"(scope_path:str | Path, plan_path:str | Path, formal_manifest_path:str | Path, config_path:str | Path, *, checkpoint_root:str | Path | None=None) -> FrozenProcessQualityScope","(scope_path:str | Path, plan_path:str | Path, formal_manifest_path:str | Path, config_path:str | Path, *, checkpoint_root:str | Path | None=None) -> FrozenProcessQualityScope",PASS
+validation/scope.py,validation/scope.py,score_preregistered_seed,"(current_plan_hash:str, seed:int) -> str","(current_plan_hash:str, seed:int) -> str",PASS
+validation/scope.py,validation/scope.py,select_preregistered_seed,(current_plan_hash:str) -> PreregisteredSeedSelection,(current_plan_hash:str) -> PreregisteredSeedSelection,PASS
+validation/scope.py,validation/scope.py,validate_process_quality_scope,"(scope:FrozenProcessQualityScope | Mapping[str, Any], plan_path:str | Path, formal_manifest_path:str | Path, config_path:str | Path, *, checkpoint_root:str | Path | None=None) -> FrozenProcessQualityScope","(scope:FrozenProcessQualityScope | Mapping[str, Any], plan_path:str | Path, formal_manifest_path:str | Path, config_path:str | Path, *, checkpoint_root:str | Path | None=None) -> FrozenProcessQualityScope",PASS
+validation/scope.py,validation/scope.py,write_process_quality_scope,"(scope:FrozenProcessQualityScope | Mapping[str, Any], output_path:str | Path, plan_path:str | Path, formal_manifest_path:str | Path, config_path:str | Path, *, checkpoint_root:str | Path | None=None) -> Path","(scope:FrozenProcessQualityScope | Mapping[str, Any], output_path:str | Path, plan_path:str | Path, formal_manifest_path:str | Path, config_path:str | Path, *, checkpoint_root:str | Path | None=None) -> Path",PASS

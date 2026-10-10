@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.idea/
+logs/
+results/*
+!results/README.md
+configs/generated/
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/README.md
+data/processed/
+*.tmp
+*.lock

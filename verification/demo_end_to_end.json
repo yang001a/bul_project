@@ -1,0 +1,29 @@
+{
+  "covered_pipeline": [
+    "XES preprocessing",
+    "trace construction",
+    "activity statistics",
+    "DFG statistics",
+    "Top-k variant statistics",
+    "temporal statistics",
+    "case-level sensitivity",
+    "Laplace release",
+    "JS divergence",
+    "Cosine loss",
+    "normalized EMD",
+    "entropy deviation",
+    "BUL aggregation",
+    "DP-full single-condition experiment"
+  ],
+  "excluded_field": "wall-clock runtime only",
+  "maximum_absolute_error": 0.0,
+  "non_numeric_fields_compared": 224,
+  "non_numeric_mismatches": 0,
+  "numeric_fields_compared": 274,
+  "numeric_mismatches": 0,
+  "reference_snapshot_sha256": "1e9be334e7626a2c6949abe5c4509bc45f8e65171e6f619329082d2a7e8fd997",
+  "release_snapshot_sha256": "1e9be334e7626a2c6949abe5c4509bc45f8e65171e6f619329082d2a7e8fd997",
+  "snapshots_byte_identical": true,
+  "status": "PASS",
+  "tolerance": 1e-12
+}

@@ -1,0 +1,12 @@
+{
+  "failed": 0,
+  "passed": 318,
+  "skipped": 13,
+  "skip_policy": {
+    "completed_result_dependent_tests": 10,
+    "opt_in_real_xes_tests": 3
+  },
+  "status": "PASS",
+  "warnings": 22,
+  "warning_scope": "Optional PM4Py performance notice and upstream NumPy matrix pending-deprecation warnings."
+}

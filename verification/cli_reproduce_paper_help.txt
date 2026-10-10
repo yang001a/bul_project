@@ -1,0 +1,17 @@
+﻿usage: main.py [-h] [--skip-tests] [--include-external-validation]
+               [--dataset-root DATASET_ROOT] [--dry-run]
+
+Reproduce parameter artifacts, the 3150-condition main experiment, derived BUL
+results, sensitivity results, and paper statistics.
+
+options:
+  -h, --help            show this help message and exit
+  --skip-tests          Skip unit and real-XES integration tests before
+                        reproduction.
+  --include-external-validation
+                        Also execute the optional representative PM4Py
+                        feasibility validation before statistical analysis.
+  --dataset-root DATASET_ROOT
+                        Directory containing the three user-supplied XES
+                        files.
+  --dry-run             Display the command sequence without executing it.

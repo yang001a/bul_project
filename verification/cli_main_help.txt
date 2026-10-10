@@ -1,0 +1,13 @@
+﻿usage: main.py [-h]
+               {preprocess,freeze-parameters,run-main,derive-bul,run-sensitivity,run-external-validation,analyze,demo,build-manifest,reproduce-paper}
+               ...
+
+BUL SCI paper artifact: reproducible experiment commands.
+
+positional arguments:
+  {preprocess,freeze-parameters,run-main,derive-bul,run-sensitivity,run-external-validation,analyze,demo,build-manifest,reproduce-paper}
+                        Artifact task to execute.
+  arguments             Arguments forwarded unchanged to the selected task.
+
+options:
+  -h, --help            show this help message and exit

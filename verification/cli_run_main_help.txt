@@ -1,0 +1,25 @@
+﻿usage: main.py [-h] [--config CONFIG] [--output-dir OUTPUT_DIR] [--plan-only |
+               --execute-numeric-reference]
+               [--max-new-conditions MAX_NEW_CONDITIONS]
+
+Validate the frozen parameter bundle, create the main experiment plan, and
+optionally execute its numerical conditions with resumable checkpoints.
+
+options:
+  -h, --help            show this help message and exit
+  --config CONFIG       Frozen experiment_config_final.json.
+  --output-dir OUTPUT_DIR
+                        Destination for the immutable plan and resumable
+                        checkpoints.
+  --plan-only           Validate and write the plan without reading XES files.
+                        This is also the default when no execution flag is
+                        supplied.
+  --execute-numeric-reference
+                        Explicitly read the frozen datasets and execute/resume
+                        the reference numerical matrix. Formal PM4Py
+                        evaluation remains disabled until its condition scope
+                        is separately frozen.
+  --max-new-conditions MAX_NEW_CONDITIONS
+                        Optional positive chunk size for this invocation. It
+                        does not alter the frozen plan and is valid only with
+                        execution enabled.
